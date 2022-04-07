@@ -1,0 +1,11 @@
+use employees;
+SELECT * FROM employees WHERE birth_date < "1965-01-01" LIMIT 20; 
+SELECT * FROM employees WHERE gender = "F" AND hire_date > "1990-01-01" LIMIT 20;
+SELECT first_name, last_name FROM employees WHERE first_name LIKE "F%" LIMIT 20;
+INSERT INTO employees VALUES (100, "2000-01-01", "Tom","Smith","M", "2010-01-01");
+INSERT INTO employees VALUES (101, "2000-01-01", "John", "Mackey", "M", "2015-01-01");
+INSERT INTO employees VALUES (102, "1998-01-01", "Sandra", "Barbara", "F", "2008-01-01");
+UPDATE employees SET first_name = "Bob" WHERE emp_no = 10023;
+UPDATE employees Set hire_date = "2002-01-01" WHERE first_name Like "P%" or last_name Like "P%";
+DELETE FROM employees WHERE emp_no < 10000; 
+Delete FROM employees WHERE emp_no = 10048 or emp_no = 10099 or emp_no = 10234 or emp_no = 20089;
